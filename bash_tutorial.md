@@ -112,6 +112,25 @@ curl -fsSL https://pixi.sh/install.sh | bash
 iwr -useb https://pixi.sh/install.ps1 | iex
 ```
 
+The installer places pixi in `~/.pixi/bin` and should add it to your PATH automatically. On Mac, if you are using bash, verify this was written to your `~/.bash_profile`:
+
+```bash
+cat ~/.bash_profile
+```
+
+You should see a line like:
+
+```bash
+export PATH="$HOME/.pixi/bin:$PATH"
+```
+
+If it is missing, add it manually:
+
+```bash
+echo 'export PATH="$HOME/.pixi/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+```
+
 After installation, **close and reopen your terminal**. Then verify it worked:
 
 ```bash
@@ -119,7 +138,6 @@ pixi --version
 ```
 
 You should see something like `pixi 0.x.x`.
-
 ---
 
 ## 7. The Project File: `pixi.toml`
