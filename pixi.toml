@@ -1,0 +1,16 @@
+[workspace]
+authors = ["dksasaki <dalton.sasaki@gmail.com>"]
+channels = ["conda-forge"]
+name = "cartopy_toturial"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+cartopy = ">=0.25.0,<0.26"
+numpy = ">=2.4.4,<3"
+matplotlib = ">=3.10.9,<4"
+xarray = ">=2026.4.0,<2027"
+pandas = ">=3.0.3,<4"
+jupyter = ">=1.1.1,<2"
